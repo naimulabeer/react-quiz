@@ -4,8 +4,9 @@
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
 
-  --color-theme: #1098ad;
-  --color-accent: #ffa94d;
+  --color-theme: #008000;
+  --color-accent: #c1121f;
+  --color-progress: #390099;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
@@ -111,7 +112,7 @@ progress {
   border-radius: 100px;
 }
 ::-webkit-progress-value {
-  background-color: var(--color-theme);
+  background-color: var(--color-progress);
   border-radius: 100px;
 }
 
@@ -256,4 +257,30 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+@media screen and (max-width: 576px) {
+  .app-header {
+    flex-direction: column;
+    width: 50%;
+  }
+  .main {
+    width: 80%;
+  }
+  .progress {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 976px) {
+  .app-header {
+    flex-direction: column;
+    width: 50%;
+  }
+  .main {
+    width: 80%;
+  }
+  .progress {
+    grid-template-columns: 1fr;
+  }
 }
